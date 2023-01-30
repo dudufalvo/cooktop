@@ -34,7 +34,7 @@ class Ingredient(models.Model):
     def __str__(self):
         return self.name
 
-class Recipes(models.Model):
+class Recipe(models.Model):
     recipe_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     description = models.TextField(_('description'), max_length=500, default='Description of the Recipe')
