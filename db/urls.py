@@ -4,15 +4,13 @@ from db.api import viewsets
 
 app_name='db'
 urlpatterns = [
-    path('', viewsets.get_routes),
-    # path('users/', viewsets.UserList.as_view()),
-    # path('users/<int:pk>/', viewsets.UserDetail.as_view()),
-    path('dietaryrestrictions/', viewsets.DietaryRestrictionList.as_view()),
-    path('dietaryrestrictions/<int:pk>/', viewsets.DietaryRestrictionDetail.as_view()),
-    path('ingredients/', viewsets.IngredientList.as_view()),
-    path('ingredients/<int:pk>/', viewsets.IngredientDetail.as_view()),
-    path('recipes/', viewsets.RecipeList.as_view()),
-    path('recipes/<int:pk>/', viewsets.RecipeDetail.as_view()),
+    path('', viewsets.routes_list),
+    path('dietaryrestriction/', viewsets.diet_rest_list),
+    path('dietaryrestriction/<int:pk>/', viewsets.diet_rest),
+    path('ingredient/', viewsets.ingredient_list),
+    path('ingredient/<int:pk>/', viewsets.ingredient),
+    path('recipe/', viewsets.recipe_list),
+    path('recipe/<int:pk>/', viewsets.recipe),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
