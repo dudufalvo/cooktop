@@ -9,9 +9,9 @@ from db.models import DietaryRestriction, Ingredient, Recipe
 def routes_list(request):
     if request.method == 'GET':
         routes = [
-            'diet_restrictions:  http://127.0.0.1:8000/api/dietary_restrictions/',
-            'ingredients:  http://127.0.0.1:8000/api/ingredients/',
-            'recipes:  http://127.0.0.1:8000/api/recipes/',
+            'diet_restrictions:  http://127.0.0.1:8000/api/diet_rest/',
+            'ingredients:  http://127.0.0.1:8000/api/ingredient/',
+            'recipes:  http://127.0.0.1:8000/api/recipe/',
         ]
         return Response(routes)
 
